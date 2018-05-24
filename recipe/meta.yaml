@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     - python >=3.6
-    - setuptools
+    - pip
     - pytest-runner
   run:
     - python >=3.6
