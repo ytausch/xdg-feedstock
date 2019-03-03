@@ -1,26 +1,26 @@
 {% set name = "xdg" %}
-{% set version = "3.0.2" %}
-{% set sha256 = "7ce9fc52cee0f8e31d0beb0f29e102f23725c0c470aee447d907e1999ffda7b7" %}
+{% set version = "4.0.0" %}
+{% set sha256 = "1bde8c45022df7574794c6aceb00d6253d77c9e62b336db06b773f6f2b521209" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   skip: True  # [win]
 
 requirements:
-  build:
+  host:
     - python >=3.6
     - pip
     - pytest-runner
+    - poetry >=0.12
   run:
     - python >=3.6
 
@@ -35,8 +35,8 @@ about:
   summary: 'Variables defined by the XDG Base Directory Specification'
 
   description: |
-      xdg is a tiny Python module which provides the variables defined by the XDG Base Directory Specification, to save you from 
-      duplicating the same snippet of logic in every Python utility you write that deals with user cache, configuration, or data files. 
+      xdg is a tiny Python module which provides the variables defined by the XDG Base Directory Specification, to save you from
+      duplicating the same snippet of logic in every Python utility you write that deals with user cache, configuration, or data files.
       It has no external dependencies and supports Python 2 and 3.
 
 extra:
