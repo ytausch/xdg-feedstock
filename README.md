@@ -11,7 +11,6 @@ Summary: Variables defined by the XDG Base Directory Specification
 
 xdg is a tiny Python module which provides the variables defined by the XDG Base Directory Specification, to save you from
 duplicating the same snippet of logic in every Python utility you write that deals with user cache, configuration, or data files.
-It has no external dependencies and supports Python 2 and 3.
 
 
 Current build status
