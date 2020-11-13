@@ -5,7 +5,7 @@ Home: https://github.com/srstevenson/xdg
 
 Package license: ISC
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xdg-feedstock/blob/master/LICENSE.txt)
 
 Summary: Variables defined by the XDG Base Directory Specification
 

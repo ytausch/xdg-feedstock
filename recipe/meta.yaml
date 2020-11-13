@@ -1,6 +1,6 @@
 {% set name = "xdg" %}
-{% set version = "4.0.1" %}
-{% set sha256 = "c939c99def394cbaf765a3ee55efd6ea7e4c5eaed8d9ebc2d03af84ba35dec57" %}
+{% set version = "5.0.1" %}
+{% set sha256 = "97a27058caa61b4ce04e05471643caa6bc8c563d2638f92c0516ac50208146d8" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -32,11 +32,11 @@ about:
   home: https://github.com/srstevenson/xdg
   license: ISC
   license_file: LICENCE
-  summary: 'Variables defined by the XDG Base Directory Specification'
+  summary: Variables defined by the XDG Base Directory Specification
 
   description: |
-      xdg is a tiny Python module which provides the variables defined by the XDG Base Directory Specification, to save you from
-      duplicating the same snippet of logic in every Python utility you write that deals with user cache, configuration, or data files.
+    xdg is a tiny Python module which provides the variables defined by the XDG Base Directory Specification, to save you from
+    duplicating the same snippet of logic in every Python utility you write that deals with user cache, configuration, or data files.
 
 extra:
   recipe-maintainers:
