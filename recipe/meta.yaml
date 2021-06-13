@@ -1,6 +1,6 @@
 {% set name = "xdg" %}
-{% set version = "5.0.2" %}
-{% set sha256 = "99a685c23dd6201b852f345f28f32099524d2677967cd413b74b39a62a866062" %}
+{% set version = "5.1.0" %}
+{% set sha256 = "3949564ca3c204e7a7fa72d85f55fb436c0e6108506e3eb61f3f4cf5be35deca" %}
 
 package:
   name: {{ name|lower }}
