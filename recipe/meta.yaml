@@ -1,13 +1,13 @@
 {% set name = "xdg" %}
-{% set version = "6.0.0" %}
-{% set sha256 = "24278094f2d45e846d1eb28a2ebb92d7b67fc0cab5249ee3ce88c95f649a1c92" %}
+{% set version = "6.0.2" %}
+{% set sha256 = "950504e14d27cf3c9cb37744680a43bf0ac42efefc4ef4acf98dc736cab2bced" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/x/xdg-base-dirs/xdg_base_dirs-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -19,8 +19,6 @@ requirements:
   host:
     - python >=3.6
     - pip
-    - pytest-runner
-    - poetry >=0.12
   run:
     - python >=3.6
 
@@ -29,7 +27,7 @@ test:
     - xdg
 
 about:
-  home: https://github.com/srstevenson/xdg
+  home: https://github.com/srstevenson/xdg-base-dirs
   license: ISC
   license_file: LICENCE
   summary: Variables defined by the XDG Base Directory Specification
@@ -41,3 +39,4 @@ about:
 extra:
   recipe-maintainers:
     - kain88-de
+    - ytausch
