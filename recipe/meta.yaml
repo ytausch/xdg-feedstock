@@ -26,6 +26,8 @@ requirements:
 test:
   imports:
     - xdg
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/srstevenson/xdg-base-dirs
